@@ -1,6 +1,12 @@
 import { createApp } from "vue";
-import { createPinia } from "pinia";
-import "./style.css";
+import { createPinia } from "pinia"; // pinia (state managment)
+import router from "./router/index"; // router
+import "./style.css"; // tailwindcss
 import App from "./App.vue";
 
-createApp(App).use(createPinia()).mount("#app");
+const app = createApp(App);
+// MiddleWare
+app.use(createPinia());
+app.use(router);
+// Mount
+app.mount("#app");
