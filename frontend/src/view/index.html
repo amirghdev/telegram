@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>log in</title>
+</head>
+<body class="bg-[#212121] overflow-hidden flex justify-center items-center w-[100vw] h-[100vh]">
+    <div  class="text-center w-[350px] my-auto mx-auto h-[538px]">
+        <div class="justify-center w-44 mt-4 m-auto flex">
+            <img class="w-full h-full object-contain" src="../images/Telegram_logo3.png" alt="">
+        </div>
+        <div class="text-center text-[32px] text-white">
+            <h4 class="mt-6 mb-5 font-iransensBold">
+                ثبت نام در تلگرام ملی
+            </h4>
+        </div>
+        <div class="grid col-auto text-[#929292] mb-5">
+            <span class="font-iransensUltralight">لطفاً ایمیل خود را وارد کنید</span>
+        </div>
+        <form action="#" class="flex flex-col justify-center mx-auto w-full">
+            <div class="relative w-full">
+                <input dir="ltr" type="email" name="" id="email-input" class="pl-3 w-full h-12 pb-1 text-[#929292] bg-transparent rounded-lg border border-gray-700 hover:border-green-300 focus:outline-none focus:border-green-500 active:border-green-500 pr-4 placeholder:text-sm placeholder:font-iransensRegular placeholder:relative placeholder:-top-6 placeholder:z-10">
+                <div id="lable-email" class=" duration-300 transition-all absolute top-[8px] right-5 bg-[#212121] w-10 ">
+                    <label id="lable-email2" class=" text-sm font-iransensRegular text-[#929292] cursor-text" for="email-input">ایمیل</label>
+                </div> 
+            </div>
+            <!-- <div id="pasdiv" class="relative mt-3 w-full flex flex-row-reverse items-center pl-2 rounded-lg border border-gray-700 focus:outline-none hover:border-green-300">
+                <input dir="rtl" type="password" placeholder="رمز عبور" name="" id="pasinput" class=" pl-3 w-[90%] h-12 text-[#929292] bg-transparent pr-4 active:border-green-500 appearance-none focus:outline-none placeholder:text-sm pb-1 placeholder:font-iransensRegular">
+                <img id="eyeicon" class="w-6 h-6 cursor-pointer" src="../images/unshow.jpg.png" alt="">
+            </div> -->
+            <div class="mt-1 w-full">
+                <button dir="rtl" id="activecheckbox" class="flex items-start-center w-full h-14 hover:rounded-xl hover:bg-[#2c2b2b] p-2">
+                    <input id="checkboxinput" class=" cursor-pointer appearance-none rounded-sm w-4 h-4 ml-3 bg-neutral-200 my-auto checked:bg-tickimage2 checked:bg-cover" type="checkbox">
+                    <label for="checkboxinput" class="flex items-center w-full h-full my-auto  text-sm text-[#929292] cursor-pointer font-iransensRegular">مرا بخاطر بسپار</label>
+                </button>
+            </div>
+            <div class="mt-2 w-full">
+                <button type="submit" class="w-full h-12 rounded-lg bg-green-600 text-white font-iransensMedium hover:bg-green-700 active:bg-green-600 ">ثبت نام</button>
+            </div>
+        </form>
+        <div class="mt-5 w-full">
+            <a href="#" class=" w-full h-14 bg-transparent text-green-500 underline hover:rounded-xl hover:bg-[#2c2b2b]">SIGN IN BY QR CODE</a>
+        </div>
+    </div>
+    <script>
+        const inputElement1 = document.getElementById('pasinput');
+        const divElement1 = document.getElementById('pasdiv');
+        const emailinput = document.getElementById("email-input");
+        const lableemail = document.getElementById("lable-email");
+        const lableemail2 = document.getElementById("lable-email2");
+        let eyeicon = document.getElementById("eyeicon");
+        let password = document.getElementById("pasinput");
+
+        emailinput.addEventListener('focus', function() {
+        lableemail.style.top = '-16px'; 
+        lableemail.style.right = '16px'; 
+        lableemail2.style.fontSize = '12px'; 
+        });
+
+        emailinput.addEventListener('blur', function() {
+            lableemail.style.top = '';
+            lableemail2.style.fontSize = ''; 
+            lableemail.style.right = ''; 
+        });
+
+        eyeicon.onclick = function(){
+             if(pasinput.type == "password"){
+                pasinput.type = "text";
+                eyeicon.src = "../images/show.jpg.png"
+             }else{
+                pasinput.type ="password"
+                eyeicon.src = "../images/unshow.jpg.png"
+             }
+        }
+
+        inputElement1.addEventListener('focus', function() {
+        divElement1.style.border = '1px solid #22c55e'; 
+        });
+
+        inputElement1.addEventListener('blur', function() {
+        divElement1.style.border = '';
+        });
+    </script>
+</body>
+</html>
