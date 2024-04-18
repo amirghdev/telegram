@@ -3,12 +3,16 @@ const usersController = require("../controllers/usersController");
 
 const router = express.Router();
 
-// @desc : send code with email
-// @route : /users/send-code POST
-router.post("/send-code", usersController.sendCode);
+router.post("/sendRegisterCode", usersController.sendRegisterCode);
 
-// @desc : validate code anc check for expire
-// @route : /users/validate-code POST
 router.post("/validate-code", usersController.validateCode);
+
+router.post("/register", usersController.register);
+
+router.post("/sendLoginCode", usersController.sendLoginCode);
+
+router.post("/login", usersController.login);
+
+router.post("/auth", usersController.auth);
 
 module.exports = router;

@@ -21,7 +21,7 @@ function manageWebsite() {
   if (process.env.NODE_ENV == "development") {
     website = "http://localhost:8080";
   } else {
-    // website = "https://dashboard.amirmohammadgharibi.ir";
+    website = "http://telegrammeli.amirmohammadgharibi.ir/";
   }
   return website;
 }
@@ -63,7 +63,10 @@ module.exports.sendMail = async (email, username, subject, instructions, buttonL
         subject,
         html: mailGenerator.generate(template),
       });
-      console.log(mail.messageId);
+      return {
+        id: mail.messageId,
+        status: 200,
+      };
     } else {
       let mail = transporter.sendMail({
         from: process.env.MAIL_USER,
@@ -71,7 +74,10 @@ module.exports.sendMail = async (email, username, subject, instructions, buttonL
         subject,
         html: mailGenerator.generate(template),
       });
-      console.log(mail.messageId);
+      return {
+        id: mail.messageId,
+        status: 200,
+      };
     }
   } catch (error) {
     console.log(error);
