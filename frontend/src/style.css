@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  input[type="password"]::-ms-reveal,
+  input[type="password"]::-ms-clear {
+    display: none;
+  }
+  @font-face {
+    font-family: iran-sens-black;
+    src: url(./assets/fonts/iransans/IRANSansX-Black.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-bold;
+    src: url(./assets/fonts/iransans/IRANSansX-Bold.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-demibold;
+    src: url(./assets/fonts/iransans/IRANSansX-DemiBold.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-extrabold;
+    src: url(./assets/fonts/iransans/IRANSansX-ExtraBold.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-light;
+    src: url(./assets/fonts/iransans/IRANSansX-Light.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-medium;
+    src: url(./assets/fonts/iransans/IRANSansX-Medium.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-regular;
+    src: url(./assets/fonts/iransans/IRANSansX-Regular.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-thin;
+    src: url(./assets/fonts/iransans/IRANSansX-Thin.woff2);
+  }
+  @font-face {
+    font-family: iran-sens-ultralight;
+    src: url(./assets/fonts/iransans/IRANSansX-UltraLight.woff2);
+  }
+}
