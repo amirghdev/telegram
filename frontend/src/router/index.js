@@ -1,16 +1,16 @@
 import { createWebHistory, createRouter } from "vue-router";
 import HomePage from "../view/home/HomePage.vue";
-import LoginViewPage from "../view/login/LoginViewPage.vue";
-import LoginPage from "../view/login/LoginPage.vue";
-import EmailVerify from "../view/login/verify/EmailVerify.vue";
+import SignUpViewPage from "../view/signup/SignUpViewPage.vue";
+import SignUpPage from "../view/signup/SignUpPage.vue";
+import EmailVerify from "../view/signup/verify/EmailVerify.vue";
 const routes = [
   { path: "/", name: "home", component: HomePage },
   {
-    path: "/login",
-    name: "login",
-    component: LoginViewPage,
+    path: "/signup",
+    name: "signup-view",
+    component: SignUpViewPage,
     children: [
-      { path: "", name: "login-page", component: LoginPage },
+      { path: "", name: "signup", component: SignUpPage },
       { path: "verify", name: "email-verify", component: EmailVerify },
     ],
   },
